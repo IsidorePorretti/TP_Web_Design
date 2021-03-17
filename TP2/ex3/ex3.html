@@ -1,0 +1,187 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="ex3.css" />
+		<title>TP 2 JavaScript Exercice 3</title>
+				
+		<script language="javascript">
+		function Calculer_Prix()
+		{
+		/*Récupération des choix du menu du client*/
+		choixEntree = document.getElementById('choixEntree').value;
+		choixPlat = document.getElementById('choixPlat').value;
+		choixDessert = document.getElementById('choixDessert').value;
+		
+		
+			
+		/*On détermine le prix des choix */
+				
+		
+		/*Prix Entree*/
+		switch(choixEntree) {
+								case "legumesHiver" :
+								prixEntree = 5;
+								break;
+								
+								case "cakeSale" :
+								prixEntree = 4;
+								break;
+								
+								case "soupe" :
+								prixEntree = 3;
+								break;
+								
+								default :
+								prixEntree = 0;
+							}
+				
+		/*Prix Plat*/
+		switch(choixPlat) {
+								case "tartarePoisson" :
+								prixPlat = 12;
+								break;
+								
+								case "tartareVege" :
+								prixPlat = 14;
+								break;
+								
+								case "lasagnesViande" :
+								prixPlat = 12;
+								break;
+								
+								case "lasagnesVege" :
+								prixPlat = 14;
+								break;
+								
+								case "pizzaFromage" :
+								prixPlat = 12;
+								break;
+								
+								case "pizzaVege" :
+								prixPlat = 14;
+								break;
+								
+								default :
+								prixPlat = 0;
+							}
+
+		/*Prix Dessert*/
+		switch(choixDessert) {
+								case "pancakes" :
+								prixDessert = 5;
+								break;
+								
+								case "fondantChoco" :
+								prixDessert = 7;
+								break;
+								
+								case "cremeBrulee" :
+								prixDessert = 6;
+								break;
+								
+								case "saladeFruits" :
+								prixDessert = 5;
+								break;
+								
+								case "ileFlottante" :
+								prixDessert = 6;
+								break;								
+								
+								default :
+								prixDessert = 0;
+							}
+		
+		
+		
+		/*Détermintation du Prix Total*/
+		prixTotal = prixEntree + prixPlat + prixDessert;
+		
+			/* On place les choix*/
+			Champ_ENTREE= document.getElementById("entree");
+			Champ_PLAT= document.getElementById("plat");
+			Champ_DESSERT= document.getElementById("dessert");
+			Champ_TOTAL= document.getElementById("total");
+		
+			/* On rentre les prix sur la page HTML*/
+			Champ_ENTREE.innerHTML = prixEntree;
+			Champ_PLAT.innerHTML = prixPlat;
+			Champ_DESSERT.innerHTML = prixDessert;
+			Champ_TOTAL.innerHTML = prixTotal;
+		
+		}
+		
+		
+		
+		
+		</script>
+		
+		</head>
+			<body>
+			
+				<h2> Composer votre menu </h2>
+					
+				<div id ="zoneChoix">
+					
+						<h4>Entrée: </h4>
+						
+							<select name="choixEntree" id="choixEntree">
+								<option value="">--Veuillez choixir une entrée--</option>
+								<option value="legumesHiver">Légumes d'hiver</option>
+								<option value="cakeSale">Cake Salé</option>
+								<option value="soupe">Soupe</option>
+							</select>
+							
+						<h4>Plat: </h4>
+						
+							<select name="choixPlat" id="choixPlat">
+								<option value="">--Veuillez choixir un plat--</option>
+								<option value="tartarePoisson">Tartare de bar au gingembre</option>
+								<option value="tartareVege">Tartare de légumes</option>
+								<option value="lasagnesViande">Lasagnes</option>
+								<option value="lasagnesVege">Lasagnes végétariennes</option>
+								<option value="pizzaFromage">Pizza aux 4 fromages</option>
+								<option value="pizzaVege">Pizza aux légumes</option>
+							</select>
+							
+							
+						<h4>Dessert: </h4>
+						
+							<select name="choixDessert" id="choixDessert">
+								<option value="">--Veuillez choixir un dessert--</option>
+								<option value="pancakes">Pancakes</option>
+								<option value="fondantChoco">Fondant au chocolat</option>
+								<option value="cremeBrulee">Crème brûlée</option>
+								<option value="saladeFruits">Salade de fruits</option>
+								<option value="ileFlottante">Ile Flottante</option>
+							</select>
+				
+						
+						<input     type="button" value="Choisir"	Onclick="Calculer_Prix();"	 />
+				</div>
+				
+				</br>
+				</br>
+				
+					
+				<div id ="montantPrix">
+				<h2>Montant à payer: </h2>
+					
+						<table id = "montantPrixTab">
+							
+							<tr> <td> Prix Entrée: </td> <td> <div id = "entree"> </div> </td> <td> € </td> </tr>
+							<tr> <td> Prix Plat: </td> <td> <div id = "plat"> </div> </td> <td> € </td> </tr>
+							<tr> <td> Prix Dessert: </td> <td> <div id = "dessert"> </div> </td> <td> € </td> </tr>
+						</table>
+						
+						<table id = "montantPrixTab">
+							<div class="montantTotal">
+							<tr> <td> Total: </td> <td> <div id = "total"> </div> </td> <td> € </td> </tr>
+							</div>
+							
+						</table>
+				</div>
+			
+			
+			</body>
+</html>

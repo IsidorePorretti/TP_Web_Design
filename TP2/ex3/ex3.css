@@ -1,0 +1,40 @@
+<style>
+
+body
+{
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: black;
+    margin: auto;	
+}
+h4
+{
+	font-family      : Arial;
+	font-weight: bold;
+	color: blue;
+}
+
+#zoneChoix
+{	
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#montantPrix
+{
+	border-top: 2px solid silver;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	
+}
+
+.montantTotal
+{
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	font-weight: bold;	
+	border-top: 2px solid silver;
+}
+
+
+
+</style>

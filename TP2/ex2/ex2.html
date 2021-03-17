@@ -1,0 +1,58 @@
+<html>
+
+	<head>
+		<title>TP JavaScript exercice 2</title>
+		<style>
+		
+		</style>
+		
+		<script language="javascript">
+		function Calculer_Produit()
+		{
+		var Champ_Texte_NB_1;
+		var Champ_Texte_NB_2;
+		var Champ_Texte_Resultat;
+		
+		var Premier_Nombre;
+		var Deuxième_Nombre;
+		var Resultat_Produit;
+		
+		Champ_Texte_NB_1= document.getElementById("N1");
+		Champ_Texte_NB_2= document.getElementById("N2");
+		Champ_Texte_Resultat= document.getElementById("RE");
+		
+		Premier_Nombre = parseFloat(Champ_Texte_NB_1.value);
+		Deuxième_Nombre = parseFloat(Champ_Texte_NB_2.value);
+		
+		
+		Resultat_Produit = 
+		(Premier_Nombre*Deuxième_Nombre);
+		Champ_Texte_Resultat.value = Resultat_Produit;
+		}
+		</script>
+		
+		</head>
+			<body>
+			
+				<fieldset>
+				<legend> Calcul du Produit de deux nombres </legend>
+				
+				Premier Nombre: 
+				<br>
+				<input type="text"  size="20"	id="N1"/>
+				<br>
+				Deuxième Nombre: <br>
+				<input type="text"  size="20" id="N2"/>
+				<br>
+				
+				<input     type="button" value="Calculer"	Onclick="Calculer_Produit();"	 />
+				<br>
+				Résultat: 
+				<br>
+				<input type="text"  size="20" id="RE"/>
+				
+				</fieldset>
+			
+			</body>
+</html>
+</html>

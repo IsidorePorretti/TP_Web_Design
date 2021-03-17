@@ -1,0 +1,42 @@
+
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+}
+
+body
+{
+    font-family: Arial,Verdana, sans-serif;
+}
+
+
+.souligne
+{
+    text-decoration: underline;
+}
+.barre
+{
+    text-decoration: line-through;
+}
+.ligne_dessus
+{
+    text-decoration: overline;
+}
+.center
+{
+    text-align: center;
+}
+
+.justify
+{
+    text-align: justify;
+}
+
+.signature
+{
+    text-align: right;
+}

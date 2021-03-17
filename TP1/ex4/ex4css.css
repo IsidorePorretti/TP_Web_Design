@@ -1,0 +1,57 @@
+
+
+.bouton {
+  background-color: lime;
+  border: 1px solid black;
+  color: white;
+  margin: 4px;
+  padding: 4px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+.bouton:hover {
+  background-color: green;
+  color: white;
+}
+
+
+#choix
+{
+	display: flex;
+	justify-content: space-between;
+	width:25%;
+	//vertical-align: middle;
+	
+}
+.ecart {
+	    
+		    vertical-align: middle;
+			margin-right: 8px;
+}
+
+
+
+fieldset
+{
+
+	
+	font-family      : Cambria;
+	font-size		 : 13px;
+	color            : black;
+
+	
+}
+
+legend
+{
+    font-family: "Comic Sans MS", Calibri, Arial,Verdana, sans-serif;
+	font-size		 : 19px;
+	color            : black;
+}
+
+
+
+

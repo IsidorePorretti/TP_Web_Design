@@ -1,0 +1,195 @@
+/* Eléments principaux de la page */
+
+body
+{
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+	width: 900px;					/*La largeur de l'élément*/
+    margin: auto;				/*Les marges seront automatiques*/
+	
+}
+
+/* Je définis le style des titres h2 et h3 */
+h2
+{
+	font-family      : Arial;
+	font-weight: bold;
+	color: blue;
+}
+
+h3
+{
+	font-family      : Arial;
+	color: blue;
+}
+
+/* Définition du header */
+header
+{   display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+
+/* Définition de la navigation de la barre menu*/
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+	margin-left:0;
+	padding-left:0;
+	height:38px;
+}
+
+nav li
+{
+	float : left;
+    margin-right: 15px;
+	//margin-left:5px;
+	vertical-align: middle;
+	
+}
+
+
+
+nav a
+{
+    font-size: 1.3em;
+    color: white;
+	padding-bottom: 3px;
+    text-decoration: none;
+	vertical-align: 5px;
+}
+
+nav a:hover
+{
+	background: url('images/menu-hover.png') top center ;
+    color: white;
+}
+
+
+/*Menu et insertion de l'image en barre d'arrière plan*/
+
+#menu
+{
+	
+	background: url('images/menu.png') no-repeat;
+    justify-content: left;	
+    margin: left;
+    
+}
+
+
+
+
+/* Définition de la place de la bannière et de l'image de fond */
+
+#banniere_image
+{
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('images/01.jpg') no-repeat;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Définition de la place de la place allouée aux éléments de div aperçu_td, ces div correspondent aux aprties avec du texte sous la bannière avec les premières infos des td*/
+#aperçu_td
+{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	height: 20%; 
+}
+/* Je place l'image de cette partie à gauche*/
+.image_td
+{
+	float:left;
+	
+}
+/* La place allouée est précisée ici*/
+.tiers
+{	
+	
+	width:250px;
+	height: 20%;
+}
+/* La partie du bouton voir TD avec l'image du fond*/
+.bouton
+{
+	
+    background: url('images/button.png') no-repeat;
+	margin-left: 50%;
+	
+	
+}
+
+.bouton:hover
+{
+		cursor: pointer;
+		color: blue;
+}
+
+
+/* Définition de la deuxième section, celle-ci correspond à la partie avec les dates des td et le à propos*/
+#section2
+{
+	display: flex;
+}
+
+
+
+/* Définition de la div choix_td, la partie gauche de la section qui prend le plus de place*/
+#choix_td
+{		
+		flex: 2;
+		//border: 3px blue dashed;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width:55%;
+		padding:2%;
+		
+}
+
+.choix_td_ligne
+{
+	border-bottom: 2px solid silver;
+}
+
+
+/* Définition de la partie à propos, ressérée à droite de la section2*/
+aside
+{	
+	
+	flex:1;
+	//border: 3px green dashed;
+	border-left: 3px solid silver;
+	position:right;
+    flex-wrap: wrap;
+	justify-content: space-around;
+	width:55%;
+	padding: 2%;
+	
+}
+
+
+/* Définition du footer*/
+footer
+{
+    display: flex;
+    //background:  url('images/fond_degraderouge.png') repeat-x top;
+	border-top: 2px solid maroon;
+    padding-top: 25px;
+}

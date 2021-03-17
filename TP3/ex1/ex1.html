@@ -1,0 +1,156 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="ex1.css" />
+		<title>TP 3 JavaScript Exercice 1</title>
+				
+		<script language="javascript">
+			function Calculer_SalaireNet()
+		{
+		//Salaire Brut
+		var champBrut = document.getElementById("salaireBrut");
+		var valeurBrute = parseFloat(champBrut.value);
+		
+		//Calcul des Impots
+		var champImpot = document.getElementById("impot");
+		var valeurImpot = valeurBrute * 0.18;
+		champImpot.value = valeurImpot;
+		
+		//Calcul Assurance
+		var champAssurance = document.getElementById("assurance");
+		var valeurAssurance = valeurBrute * 0.07;
+		champAssurance.value = valeurAssurance;
+		
+		//Calcul Pensions
+		var champPensions = document.getElementById("pension");
+		var valeurPensions = valeurBrute * 0.05;
+		champPensions.value = valeurPensions;
+		
+		
+		//Determintation du genre
+		/*
+		switch(selectGenre) {
+								case "Homme" :
+								coeff = 0;
+								break;
+								
+								case "Femme" :
+								coeff = 0.02;
+								break;
+								
+								case "Autre" :
+								coeff = 0;
+								break;
+								
+								default :
+								coeff = 0;
+							}
+							*/
+		var champGenre =  document.getElementById("genre");
+		var valeurGenre = champGenre.options[champGenre.selectedIndex].value*valeurBrute;
+		
+		//var valeurGenre = coeff*valeurBrute;
+		//champGenre.innerHTML = valeurGenre;
+		
+		//Supplément bonus et allocation
+		var champSupplement = document.getElementById("supplement");
+		var valeurSupplement;
+			if (champSupplement.checked == true) 
+				{valeurSupplement = 100;
+				} else {
+					valeurSupplement = 0;
+					}
+						
+		
+		var champAllocation = document.getElementById("allocation");
+		var valeurAllocation;
+			if (champAllocation.checked == true) 
+				{valeurAllocation = 150;
+				} else {
+					valeurAllocation = 0;
+					}
+		
+		//Reductions
+		var champReduction = document.getElementById("reduction");
+		champReduction.value = parseFloat(valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
+		
+		
+		//Determination du nombre de personnes à charges
+		var champPersonnesCharge = document.getElementById("personnesCharge");
+		var valeurPersonnesCharge;
+			if (champPersonnesCharge.value == 3) 
+				{valeurPersonnesCharge = 0.01 * valeurBrute;
+				} 
+			if (champPersonnesCharge.value >= 4) 
+				{valeurPersonnesCharge = 0.02 * valeurBrute;
+				} 
+			else {
+					valeurPersonnesCharge = 0;
+					}
+		
+		//Calcul du Salaire Net
+		var champSalaireNet = document.getElementById("salaireNet");
+		champSalaireNet.value = parseFloat(salaireBrut - valeurImpot - valeurAssurance - valeurPensions + valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
+				
+
+		}		
+		</script>
+		
+		</head>
+			<body>
+				<div id = "questionnaire">
+				<h1>Calculateur de Salaire</h1>
+				
+					<fieldset>
+					<p>Salaire Brut: <input type="text"  size="20"	id="salaireBrut"/></p>
+					<p>Supplément: <input type="checkbox"  size="20"	id="supplement"/></p>
+					<p>Allocations: <input type="checkbox"  size="20"	id="allocation"/></p>
+					<p>Genre: 	<select id="genre">
+								<option value="0">--Veuillez choixir un genre--</option>
+								<option value="0">Homme</option>
+								<option value="0.02">Femme</option>
+								<option value="0">Autre</option>
+								</select></p>
+					<p>Personnes à charge: 	<input type="text"  size="20"	id="personnesCharge"/></p>
+					<input     type="button" value="Calculer"	Onclick="Calculer_SalaireNet();"	 />
+					<input     type="button" value="Effacer"	Onclick="effacer();"	 />
+					</fieldset>
+				</div>
+				
+				<div id ="resultat">
+				<h2>Résultat: </h2>
+					
+						<fieldset>
+						
+						<!-- <table id = "calculsSalaireTab"> -->
+							
+							<!-- <tr> <td> Valeur des impôts: -</td> <td> <div id = "impot"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Valeur des assurances: -</td> <td> <div id = "assurance"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Valeur des pensions: -</td> <td> <div id = "pensions"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Reduction genrée: +</td> <td> <div id = "genre"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Supplément: +</td> <td> <div id = "supplement"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Allocations: +</td> <td> <div id = "allocation"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Personnes à charges: +</td> <td> <div id = "personnesCharge"> </div> </td> <td> € </td> </tr> -->
+							<!-- <tr> <td> Total: </td> <td> <div id = "salaireNet"> </div> </td> <td> € </td> </tr> -->
+							<!-- </div> -->
+							
+						<!-- </table> -->
+						
+						<div>
+						
+						<p>Coût de l'impôt sur le revenu : <input type="text" id="impot" /></P>
+						<p>Coût des assurances : <input type="text" id="assurance" /></P>
+						<p>Coût des pensions : <input type="text" id="pension" /></P>
+						<p>Réductions : <input type="text" id="reduction" /></P>
+						<p>Salaire Net : <input type="text" id="salaireNet" /></P>
+						
+						</div>
+						
+						
+						</fieldset>
+				</div>
+				
+			
+			</body>
+</html>
