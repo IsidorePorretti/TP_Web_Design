@@ -1,6 +1,6 @@
 body {
 	background-color : #DDDDDD;
-	width : 65%;
+	width : 90%;
 	font-family : sans-serif;
 	padding-left : 10px;
 	margin		: auto;
@@ -13,19 +13,19 @@ h1 {
 	color : rgb(60,60,60);
 	padding : 5px;
 	border-radius : 4px;
-	width : 850px;
+	/* width : 90%; */
 	box-shadow : 0px 0px 2px 2px rgba(80,64,64,0.5);
 }
 
 div#panier, div#boutique {
-	background-color: white;
 	display : inline-block;
 	vertical-align: middle;
 	height : 670px;
 }
 
 div#boutique {
-		width : 600px;	
+		width : 600px;
+		background-color: white;	
 }
 
 
@@ -33,7 +33,8 @@ div.achats, div#boutique {
 	overflow: auto;
 }
 
-div#panier, div#boutique {
+/* div#panier,  */
+div#boutique {
   box-shadow : 0px 0px 2px 2px rgba(80,64,64,0.5);
 	padding : 2px;
 	border-radius : 4px;
@@ -47,7 +48,7 @@ div.achats {
 }
 
 div#panier { 
-	width : 245px;
+	width : 200px;
 	text-align : center;
 }
 
@@ -137,18 +138,6 @@ button.commander {
 }
 
 
-button.retirer {
-	width : 19px;
-	height : 19px;
-	background-size : cover;
-	border : solid 2px white;
-	box-shadow : 0px 0px 2px 1px rgba(200,0,0,0.6);	
-}
-
-button.retirer {
-	background-image : url("./images/poubelle.jpg");
-}
-
 input[type="number"] {
 	width : 34px;
 	font-size : 14px;
@@ -164,7 +153,6 @@ input[type="number"] {
 }
 
 .achat div.controle {
-
 	text-align : center;	
 }
 
@@ -234,4 +222,34 @@ div.controle button, div.controle input {
 	margin : 4px 2px;
 	padding : 2px;
 }
+#gd-pre-footer { 
+	overflow:hidden; 
+	clear:both; 
+	margin-top:35px; margin-bottom:10px; padding-bottom:0; 
+	
+	vertical-align: middle;}
+	#gd-pre-footer .col-item { padding:15px 25px; text-align:center; list-style:none; }
+	#gd-pre-footer center { background:none; }
+	@media screen and (min-width: 768px) {
+	  #gd-pre-footer .col-item {
+		width:33%;
+		text-align:center;
+		float:left;
+		padding:5px 15px;
+	  }
+	}
+	.dg-rotation {
+	-webkit-animation: rotating 7s linear infinite;
+	}
+	
+	@-webkit-keyframes rotating {
+	from {-webkit-transform: rotate(0deg); }
+	to {-webkit-transform: rotate(360deg); } }
 
+
+
+.bandeau { background:#67B9FD; margin:0; padding:10px 0; overflow:hidden; }
+		.bandeau-inner { display:inline-block; white-space: nowrap; float:left; }
+		.bandeau-inner p { color:#fff; margin:0 auto !important; }
+		.bandeau-inner p span { padding-right:20px; }
+		.bandeau-vertical { display:block; float:none; width:100%; text-align:center;}

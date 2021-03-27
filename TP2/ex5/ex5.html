@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="ex5.css" />
+		<title>TP 2 JavaScript Exercice 5</title>
+		<!-- Réalisé par Isidore PORRETTI, EPF MIN 1 -->
+				
+		<script type="text/javascript">
+		//-------------------------------
+		// entree : le tableau a randommer
+		// sortie : le tableau randomme
+		//-------------------------------
+			tab = []   
+			function generateRandomTab() {     
+			let nbMaxAleatoire = 100;     
+			let tailleTableau = parseInt(document.getElementById("tabLength").value);  
+			console.log(tailleTableau);			
+			for (let i = 0; i < tailleTableau; i++) {         
+			tab.push(Math.floor(Math.random() * Math.floor(nbMaxAleatoire)))     		
+			}
+			 var resultat1 = document.getElementById("result1");
+			  resultat1.value =tab;
+			console.log(tab);
+			
+			}
+			
+			
+			function sort(){
+				for(var i = 0; i < tab.length; i++){
+				//stocker l'index de l'élément minimum
+				var min = i; 
+				for(var j = i+1; j < tab.length; j++){
+				  if(tab[j] < tab[min]){
+				   // mettre à jour l'index de l'élément minimum
+				   min = j; 
+				  }
+				}
+				var tmp = tab[i];
+				tab[i] = tab[min];
+				tab[min] = tmp;
+			  } 
+			  console.log(tab);
+			  var resultat2 = document.getElementById("result2");
+			  resultat2.value =tab;
+			}
+		  
+		
+		</script>
+		</head>
+		<body>
+		<h3>Tri d'un tableau aléatoire</h3>
+		<p>Veuillez rentrer la taille du tableau : <input type="text" id="tabLength" /></P>
+		<input type = "button" value = "Lance un tableau" onclick = "generateRandomTab();">
+		<input type = "button" value = "Trie le tableau" onclick = "sort();">
+		<p>Tableau généré: <input type="text" id="result1" /></P>
+		<p>Tableau trié: <input type="text" id="result2" /></P>
+		</body>
+		</html>

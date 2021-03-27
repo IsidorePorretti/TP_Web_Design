@@ -1,0 +1,36 @@
+p {
+background: #00CC01;
+color: red;
+}
+
+.definition {color:#006}
+.conclusion {color:#666}
+
+p.rem {
+background: #00CC01;
+color: #0000FF;
+padding-left: 100px;
+padding-top: 100px;
+margin-left: 50;
+margin-top: 50;
+}
+
+H2 {
+color: #FF00FF;
+}
+
+#plusInfo {
+	
+   font-size: 35px;	
+}
+
+a:link { color : blue}
+a:hover { color : red }
+a:visited { color : black }
+
+input:focus { background : blue }
+
+p > a {
+	
+   font-size: 35px;	
+}

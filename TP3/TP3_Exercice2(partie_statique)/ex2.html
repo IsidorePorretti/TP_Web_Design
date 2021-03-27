@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Achat en ligne</title>
+	<meta charset="UTF-8"/> 		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/ex2.css" />   
+	<!-- Réalisé par Isidore PORRETTI, EPF MIN 1 -->
+
+	<script src="ex2.js"></script>
+</head>
+
+
+
+<body>
+   <h1>Vitrine en ligne</h1>
+
+	
+
+
+
+	</br>
+	<div id="corps">
+	<div id="boutique"> 
+		
+		<div class="produit" id="1-product">
+			<h4>Nounours blanc (ref 1)</h4>
+			<figure><img src="images/nounours2.jpg" alt="Nounours blanc"></figure>
+			<div class="description">un ours blanc tout doux</div>			
+			<input id="p1" name="Nounours blanc" type="hidden" value="1">
+			<div class="prix">42</div>			
+			<input id="prix1" type="hidden" value="42">
+			<div class="controle">
+				<input id="qte1" step="1" min="1" max="9" type="number" value="1"></input>
+				<button class="commander" id="1-order" type="submit" onclick="ajouter(p1, qte1, prix1)"></button>
+			</div>
+		</div>
+		
+		<div class="produit" id="2-product">
+			<h4>Peluche Ane gris (ref 2)</h4>
+			<figure><img src="images/ane.jpg" alt="Peluche Ane gris"></figure>
+			<div class="description">joli petit ane gris</div>			
+			<input id="p2" name="Peluche Ane gris" type="hidden" value="2">
+			<div class="prix">15</div>
+			<input id="prix2" type="hidden" value="15">
+			<div class="controle">
+				<input id="qte2" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="2-order" type="submit" onclick="ajouter(p2, qte2, prix2)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="3-product">
+			<h4>Pokemon Bulbizarre (ref 3)</h4>
+			<figure><img src="images/bulbizarre.jpg" alt="Pokemon Bulbizarre"></figure>
+			<div class="description">Pokemon Bulbizarre</div>
+			<input id="p3" name="Pokemon Bulbizarre" type="hidden" value="3">
+			<div class="prix">25</div>
+			<input id="prix3" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte3" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="3-order" style="opacity: 0.25;" type="submit" onclick="ajouter(p3, qte3, prix3)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="4-product">
+			<h4>Cochon rose (ref 4)</h4>
+			<figure><img src="images/cochon.jpg" alt="Cochon rose"></figure>
+			<div class="description">un petit cochon rose tout frippé</div>
+			<input id="p4" name="Cochon rose" type="hidden" value="4">
+			<div class="prix">35</div>
+			<input id="prix4" type="hidden" value="35">
+			<div class="controle">
+				<input id="qte4" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="4-order" type="submit" onclick="ajouter(p4, qte4, prix4)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="5-product">
+			<h4>Donkey Kong (ref 5)</h4>
+			<figure><img src="images/donkekong.jpg" alt="Donkey Kong"></figure>
+			<div class="description">Le célèbre Donkey Kong</div>
+			<input id="p5" name="Donkey Kong" type="hidden" value="5">
+			<div class="prix">25</div>
+			<input id="prix5" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte5" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="5-order" type="submit" onclick="ajouter(p5, qte5, prix5)"></button>
+			</div>
+		</div>
+		
+		
+		<div class="produit" id="6-product">
+			<h4>Girafe (ref 6)</h4>
+			<figure><img src="images/girafe.jpg" alt="Girafe"></figure>
+			<div class="description">Petite girafe assise</div>
+			<input id="p6" name="Girafe" type="hidden" value="6">
+			<div class="prix">23</div>
+			<input id="prix6" type="hidden" value="23">
+			<div class="controle">
+				<input id="qte6" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="6-order" type="submit" onclick="ajouter(p6, qte6, prix6)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="7-product">
+			<h4>Peluche Hibou (ref 7)</h4>
+			<figure><img src="images/hibou.jpg" alt="Peluche Hibou"></figure>
+			<div class="description">Un hibou tout en plume.</div>
+			<input id="p7" name="Link" type="hidden" value="7">
+			<div class="prix">22</div>
+			<input id="prix7" type="hidden" value="22">
+			<div class="controle">
+			<input id="qte7" step="1" min="1" max="9" type="number" ></input>
+			<button class="commander" id="7-order" type="submit" onclick="ajouter(p7, qte7, prix7)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="8-product">
+			<h4>Link (ref 8)</h4>
+			<figure><img src="images/link.jpg" alt="Link"></figure>
+			<div class="description">Link le héros de la série Zelda.</div>
+			<input id="p8" name="Link" type="hidden" value="8">
+			<div class="prix">25</div>
+			<input id="prix8" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte8" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="8-order" type="submit" onclick="ajouter(p8, qte8, prix8)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="9-product">
+			<h4>Nounours crème (ref 9)</h4>
+			<figure><img src="images/nounours3.jpg" alt="Nounours crème"></figure>
+			<div class="description">Il est pas mignon avec ses grosses papattes ?</div>
+			<input id="p9" name="Nounours crème" type="hidden" value="9">
+			<div class="prix">35</div>
+			<input id="prix9" type="hidden" value="35">
+			<div class="controle">
+				<input id="qte9" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="9-order" type="submit" onclick="ajouter(p9, qte9, prix9)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="10-product">
+			<h4>Panda (ref 10)</h4>
+			<figure><img src="images/panda.jpg" alt="Panda"></figure>
+			<div class="description">Un bon gros panda joufflu</div>
+			<input id="p10" name="Panda" type="hidden" value="10">
+			<div class="prix">35</div>
+			<input id="prix10" type="hidden" value="35">
+			<div class="controle">
+				<input id="qte10" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="10-order" type="submit" onclick="ajouter(p10, qte10, prix10)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="11-product">
+			<h4>Pokemon Pikachu (ref 11)</h4>
+			<figure><img src="images/pikachu.jpg" alt="Pokemon Pikachu"></figure>
+			<input id="p11" name="Pokemon Pikachu" type="hidden" value="11">
+			<div class="description">Le plus célèbre des pokemons.</div>
+			<div class="prix">25</div>
+			<input id="prix11" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte11" step="1" min="1" max="9" type="number"></input>
+				<button class="commander" id="11-order" type="submit" onclick="ajouter(p11, qte11, prix11)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="12-product">
+			<h4>Peluche Poule (ref 12)</h4>
+			<figure><img src="images/poule.jpg" alt="Peluche Poule"></figure>
+			<input id="p12" name="Peluche Poule" type="hidden" value="12">
+			<div class="description">Une idée originale de peluche</div>
+			<div class="prix">27</div>
+			<input id="prix12" type="hidden" value="27">
+			<div class="controle">
+				<input id="qte12" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="12-order" type="submit" onclick="ajouter(p12, qte12, prix12)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="13-product">
+			<h4>Renard (ref 13)</h4>
+			<figure><img src="images/renard.jpg" alt="Renard"></figure>			
+			<input id="p13" name="renard" type="hidden" value="13">
+			<div class="description">Un renard très sympathique.</div>
+			<div class="prix">45</div>
+			<input id="prix13" type="hidden" value="45">
+			<div class="controle">
+				<input id="qte13" step="1" min="1" max="9" type="number"></input>
+				<button class="commander" id="13-order" type="submit" onclick="ajouter(p13, qte13, prix13)"></button>
+			</div>
+		</div>
+
+		<div class="produit" id="14-product">
+			<h4>Pokemon Riolu (ref 14)</h4>
+			<figure><img src="images/riolu.jpg" alt="Pokemon Riolu"></figure>
+			<input id="p14" name="Pokemon Riolu" type="hidden" value="14">
+			<div class="description">Pokemon Riolu</div>
+			<div class="prix">25</div>
+			<input id="prix14" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte14" step="1" min="1" max="9" type="number"></input>
+				<button class="commander" id="15-order" type="submit" onclick="ajouter(p14, qte14, prix14)"></button>
+			</div>
+		</div>
+		
+		<div class="produit" id="15-product">
+			<h4>Pokemon Salameche (ref 15)</h4>
+			<figure><img src="images/salameche.jpg" alt="Pokemon Salameche"></figure>
+			<input id="p15" name="pokemon salameche" type="hidden" value="15">
+			<div class="description" id="salameche" type="number" value="15" >Pokemon Salameche</div>
+			<div class="prix">25</div>
+			<input id="prix15" type="hidden" value="25">
+			<div class="controle">
+				<input id="qte15" step="1" min="1" max="9" type="number"></input>
+				<button class="commander" id="15-order" type="submit" onclick="ajouter(p15, qte15, prix15)"></button>
+			</div>
+		</div>
+		
+		<div class="produit" id="16-product">
+			<h4>Nounours marron (ref 16)</h4>
+			<figure><img src="images/nounours1.jpg" alt="Nounours marron"></figure>
+			<input id="p16" name="Nounours marron" type="hidden" value="16">
+			<div class="description">un joli nounours marron avec un foulard</div>
+			<div class="prix">35</div>
+			<input id="prix16" type="hidden" value="35">
+			<div class="controle">
+				<input id="qte16" step="1" min="1" max="9" type="number" ></input>
+				<button class="commander" id="0-order" type="submit" onclick="ajouter(p16, qte16, prix16)"></button>
+			</div>
+		</div>
+    </div>
+		
+
+
+
+		<div id="panier">
+			
+			<section class="container">
+				<article id="afixer" class="well form-inline pull-left col-lg-6"> <!--Ce texte permet de dimensionner la place alouée pour l'affichage du tableau-->
+					<legend>Contenu du panier</legend>
+					<table id="tableau" class="table">
+						<thead>
+							<tr>
+								<th>       </th> <!--Permet de ne pas afficher cette colonne mais de quand meme la prendre en compte-->
+								<th>       </th>
+								<th>                         </th>
+								<th>Qte</th>
+								<th>Prix uni</th>
+								<th>Prix </th>
+								<th>Supprimer</th>
+							</tr>
+						</thead>
+					</table>
+					<br><label>Prix du panier total</label> : <label id = "prixTotal"></label>
+					<label id = "nbreLignes" hidden>0</label>
+				</article>
+			</section>
+			
+		</div>
+	</div>
+
+   
+
+</body>
+</html>

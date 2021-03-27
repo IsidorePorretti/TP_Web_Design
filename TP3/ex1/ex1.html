@@ -1,10 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 	<head>
 		<meta charset="utf-8" />
         <link rel="stylesheet" href="ex1.css" />
 		<title>TP 3 JavaScript Exercice 1</title>
-				
+		<!-- Réalisé par Isidore PORRETTI, EPF MIN 1 -->
+		
 		<script language="javascript">
 			function Calculer_SalaireNet()
 		{
@@ -47,8 +49,8 @@
 								coeff = 0;
 							}
 							*/
-		var champGenre =  document.getElementById("genre");
-		var valeurGenre = champGenre.options[champGenre.selectedIndex].value*valeurBrute;
+		var champGenre =  document.getElementById("genre").value;
+		var valeurGenre = champGenre * valeurBrute;
 		
 		//var valeurGenre = coeff*valeurBrute;
 		//champGenre.innerHTML = valeurGenre;
@@ -61,7 +63,7 @@
 				} else {
 					valeurSupplement = 0;
 					}
-						
+		//console.log(valeurSupplement);			
 		
 		var champAllocation = document.getElementById("allocation");
 		var valeurAllocation;
@@ -70,11 +72,7 @@
 				} else {
 					valeurAllocation = 0;
 					}
-		
-		//Reductions
-		var champReduction = document.getElementById("reduction");
-		champReduction.value = parseFloat(valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
-		
+		//console.log(valeurAllocation);
 		
 		//Determination du nombre de personnes à charges
 		var champPersonnesCharge = document.getElementById("personnesCharge");
@@ -88,10 +86,17 @@
 			else {
 					valeurPersonnesCharge = 0;
 					}
+		//Reductions
+		var champReduction = document.getElementById("reduction");
+		champReduction.value = parseFloat(valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
+		//console.log(parseFloat(valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge));
+		
+		
+		
 		
 		//Calcul du Salaire Net
 		var champSalaireNet = document.getElementById("salaireNet");
-		champSalaireNet.value = parseFloat(salaireBrut - valeurImpot - valeurAssurance - valeurPensions + valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
+		champSalaireNet.value = parseFloat(valeurBrute - valeurImpot - valeurAssurance - valeurPensions + valeurGenre + valeurSupplement + valeurAllocation + valeurPersonnesCharge);
 				
 
 		}		
@@ -113,7 +118,7 @@
 								<option value="0">Autre</option>
 								</select></p>
 					<p>Personnes à charge: 	<input type="text"  size="20"	id="personnesCharge"/></p>
-					<input     type="button" value="Calculer"	Onclick="Calculer_SalaireNet();"	 />
+					<input     type="button" value="Calculer"	Onclick="Calculer_SalaireNet()"	 />
 					<input     type="button" value="Effacer"	Onclick="effacer();"	 />
 					</fieldset>
 				</div>
