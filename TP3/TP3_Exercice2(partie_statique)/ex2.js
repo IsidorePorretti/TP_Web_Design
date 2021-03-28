@@ -34,7 +34,7 @@
 		else if(this.codeArticle==13){return "<img src=\"images/renard.jpg\" alt=\"Renard\" width = \"32\">";}
 		else if(this.codeArticle==14){return "<img src=\"images/riolu.jpg\" alt=\"Pokemon Riolu\" width = \"32\">";}
         else if(this.codeArticle==15){return "<img src=\"images/salameche.jpg\" alt=\"Pokemon Salameche\" width = \"32\">";}
-		else if(this.codeArticle==0){return "<img src=\"images/nounours1.jpg\" alt=\"Nounours marron\" width = \"32\">";} 
+		else if(this.codeArticle==16){return "<img src=\"images/nounours1.jpg\" alt=\"Nounours marron\" width = \"32\">";} 
 	}
 	this.getDescription= function()
 	{
@@ -164,3 +164,25 @@ function Panier()
 			document.getElementById("prixTotal").innerHTML = monPanier.getPrixPanier();
 			document.getElementById("nbreLignes").innerHTML = longueur;
 		}
+		
+//==============================================//
+//== 5. Gestion de la reherche dans le panier ==//
+//==============================================//
+function Recherche()
+{
+    document.getElementById('filter').addEventListener('keyup', function(e) {
+        var recherche = this.value.toLowerCase();
+        var documents = document.querySelectorAll('.document');
+
+        Array.prototype.forEach.call(documents, function(document) {
+
+          // On a bien trouvé les termes de recherche.
+          if (document.innerHTML.toLowerCase().indexOf(recherche) > -1) {
+
+            document.style.display = 'block';
+          } else {
+            document.style.display = 'none';
+          }
+        });
+      });
+}
